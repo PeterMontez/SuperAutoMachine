@@ -42,7 +42,7 @@ public class Game
     }
 }
 
-public void TradeDamage(Boneco boneco1, Boneco boneco2)
-{
-    
-}
+// public void TradeDamage(Boneco boneco1, Boneco boneco2)
+// {
+
+// }
