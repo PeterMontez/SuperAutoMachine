@@ -1,5 +1,3 @@
-using System;
-
 public abstract class Actions
 {
     public void gainGold(int gold)

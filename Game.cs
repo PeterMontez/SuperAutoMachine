@@ -14,12 +14,13 @@ public class Interface
         
 
     }
-    public void Selector()
+    public void Selector(int option)
     {
         switch(option)
         {
             case 1:
-                Game.Current.Buy(/* IMPLEMENTAR OS PARAMETROS AQUI */);
+                WorkShop.Show();
+                Game.Current.Buy();
                 break;
         }
     }
