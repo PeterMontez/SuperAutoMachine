@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 public class Team
 {
     private List<Boneco> team = new List<Boneco>(5);
+    
+    public int getSize() => team.Count();
     public void Fusion(int i, int j)
     {
         team[i].ChangeXp(team[j].GetXp());
@@ -17,6 +20,13 @@ public class Team
             team.Add(boneco);
             return true;
         }
+        return false;
+    }
+    public bool AddRandomBoneco(int quantity)
+    {
+        Random random = new Random();
+        random.Next(0, )
+
         return false;
     }
     public bool PopBoneco(int index)
@@ -38,4 +48,23 @@ public class Team
         return true;
     }
     public Boneco GetTeam(int index) => team[index];
+    
+    public override string ToString()
+    {
+        string StringShop = "";
+
+        for (int i = 0; i < team.Count; i++)
+        {
+            if(team[i] != null)
+            {
+                StringShop += "[ " + team[i].getName() + " - ";
+                StringShop += team[i].GetAttack() + " - ";
+                StringShop += team[i].getPassive().Name ?? "Não tem passiva" + " - ";
+                StringShop += team[i].GetLife() + "]";
+                StringShop += "\n";
+            }
+        }
+ 
+        return StringShop;
+    }
 }

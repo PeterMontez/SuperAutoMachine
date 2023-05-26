@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public class WorkShop
@@ -26,5 +27,24 @@ public class WorkShop
             return boneco;
         }
         return null;
+    }
+
+    public override string ToString()
+    {
+        string StringShop = "";
+
+        for (int i = 0; i < ShopBonecos.Count; i++)
+        {
+            if(ShopBonecos[i] != null)
+            {
+                StringShop += "[ " + ShopBonecos[i].getName() + " - ";
+                StringShop += ShopBonecos[i].GetAttack() + " - ";
+                StringShop += ShopBonecos[i].getPassive().Name ?? "Não tem passiva" + " - ";
+                StringShop += ShopBonecos[i].GetLife() + "]";
+                StringShop += "\n";
+            }
+        }
+ 
+        return StringShop;
     }
 }

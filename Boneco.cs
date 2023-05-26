@@ -23,4 +23,5 @@ public class Boneco
     public int GetLife() => this.Life;
     public int GetAttack() => this.Damage;
     public int GetLevel() => this.Level;
+    public Passive getPassive() => this.passive;
 }
