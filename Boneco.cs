@@ -20,4 +20,5 @@ public class Boneco
     public int GetXp() => this.Experience;
     public int GetLife() => this.Life;
     public int GetAttack() => this.Damage;
+    public int GetLevel() => this.Level;
 }
