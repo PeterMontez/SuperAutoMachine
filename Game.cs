@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 public class Interface
 {
+    protected int option { get; set; }
     public void Menu()
     {    
         Console.WriteLine($"01 - Comprar.");
         Console.WriteLine($"02 - Vender.");
         Console.WriteLine($"03 - Reposicionar.");
         Console.WriteLine($"04 - Iniciar.");
-        int option = Convert.ToInt32(Console.ReadLine());
+        option = Convert.ToInt32(Console.ReadLine());
         
 
     }
