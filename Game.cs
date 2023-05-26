@@ -11,7 +11,6 @@ public class Interface
         Console.WriteLine($"03 - Reposicionar.");
         Console.WriteLine($"04 - Iniciar.");
         option = Convert.ToInt32(Console.ReadLine());
-        
 
     }
     public void Selector(int option)

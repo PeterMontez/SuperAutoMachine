@@ -1,14 +1,14 @@
 public class Boneco
 {
-    private Boneco() {}
-    protected string Name { get; set; }
-    protected int Damage { get; set; }
-    protected int Life { get; set; }
-    protected int Tier { get; set; } 
-    protected int Experience { get; set; } = 1;
-    protected int Level { get; set; }
-    protected int Position { get; set; }
-    protected Passive passive { get; set; }
+    public Boneco() {}
+    public string Name { get; set; }
+    public int Damage { get; set; }
+    public int Life { get; set; }
+    public int Tier { get; set; } 
+    public int Experience { get; set; } = 1;
+    public int Level { get; set; }
+    public int Position { get; set; }
+    public Passive passive { get; set; }
 
     public string getName() => this.Name;
     public void ChangeLife(int life) => this.Life += life;

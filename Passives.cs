@@ -42,10 +42,16 @@ public abstract class EndOfTurnActions : PassiveList
     
 }
 
+public abstract class WhenDeadActions : PassiveList
+{
+    
+}
+
 public class Passive
 {
     protected Actions effect { get; set; }
     protected int Position { get; set; }
+    protected bool Active { get; set; } = false;
 
     public virtual void act() 
     {
@@ -59,6 +65,7 @@ public class Sold : Passive
     {
         this.Position = position;
         this.effect = effect;
+        this.Active = true;
     }
 }
 
@@ -68,6 +75,7 @@ public class StartOfTurn : Passive
     {
         this.Position = position;
         this.effect = effect;
+        this.Active = true;
     }
 }
 
@@ -77,6 +85,7 @@ public class Hurt : Passive
     {
         this.Position = position;
         this.effect = effect;
+        this.Active = true;
     }
 }
 
@@ -86,6 +95,7 @@ public class BeforeAttack : Passive
     {
         this.Position = position;
         this.effect = effect;
+        this.Active = true;
     }
 }
 
@@ -95,5 +105,16 @@ public class EndOfTurn : Passive
     {
         this.Position = position;
         this.effect = effect;
+        this.Active = true;
+    }
+}
+
+public class WhenDead : Passive
+{
+    public WhenDead(int position, Actions effect)
+    {
+        this.Position = position;
+        this.effect = effect;
+        this.Active = true;
     }
 }

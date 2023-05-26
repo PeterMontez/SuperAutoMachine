@@ -1,4 +1,4 @@
-public abstract class Actions
+public class Actions
 {
     public void gainGold(int gold)
     {
@@ -23,15 +23,22 @@ public abstract class Actions
     public virtual void run(int position) {}
 }
 
-public abstract class GainGold : Actions 
+public class GainGold : Actions 
 {
-    public override void run(int gold)
+    protected int gold { get; set; }
+
+    public GainGold(int gold)
+    {
+        this.gold = gold;
+    }
+
+    public override void run(int uselessParam)
     {
         Game.Current.Money += gold;
     }
 }
 
-public abstract class ChangeLife : Actions 
+public class ChangeLife : Actions 
 {
     //public override void run(Boneco boneco, int value)
     public override void run(int position)
@@ -40,12 +47,12 @@ public abstract class ChangeLife : Actions
     }
 }
 
-public abstract class ChangeAttack : Actions 
+public class ChangeAttack : Actions 
 {
     //public override void run(Boneco boneco, int value)
     public override void run(int position)
     {
         //boneco.ChangeAttack(value);
-        //team.
+        team.GetTeam(position);
     }
 }
