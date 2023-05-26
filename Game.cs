@@ -3,21 +3,21 @@ using System.Collections.Generic;
 
 public class Interface
 {
-    public void Menu()
+    public int Menu()
     {    
         Console.WriteLine($"01 - Comprar.");
         Console.WriteLine($"02 - Vender.");
         Console.WriteLine($"03 - Reposicionar.");
         Console.WriteLine($"04 - Iniciar.");
-        int option = Convert.ToInt32(Console.ReadLine());
-        
 
+        return Convert.ToInt32(Console.ReadLine());
     }
-    public void Selector()
+    public void Selector(int option)
     {
         switch(option)
         {
             case 1:
+                WorkShop.Show();
                 Game.Current.Buy();
                 break;
         }

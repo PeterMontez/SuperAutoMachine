@@ -9,6 +9,8 @@ public class Boneco
     protected int Level { get; set; }
     protected int Position { get; set; }
     protected Passive passive { get; set; }
+
+    public string getName() => this.Name;
     public void ChangeLife(int life) => this.Life += life;
     public void ChangeAttack(int attack) => this.Damage += attack;
     public void ChangeXp(int xp) 
