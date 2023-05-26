@@ -2,7 +2,7 @@
 
 A console game in C# that blatantly copies the super auto pets mechanics, but with workshop tools.
 
-It's a project mainly
+It's a project mainly done to practice design structures and clean code, but I'm feeling that with each commit we get further away from that. Yikes
 ## FAQ
 
 #### Do you have any idea what you're doing?
