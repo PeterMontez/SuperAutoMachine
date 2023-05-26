@@ -1,6 +1,6 @@
-public abstract class Maternity
+public static class Maternity
 {
-    public Boneco birth()
+    public static Boneco birth()
     {
 
     }
@@ -8,5 +8,5 @@ public abstract class Maternity
 
 public class BonecoBuilder
 {
-    
+
 }

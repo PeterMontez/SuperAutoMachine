@@ -48,6 +48,6 @@ public abstract class ChangeAttack : Actions
     public override void run(int position)
     {
         //boneco.ChangeAttack(value);
-        team.
+        //team.
     }
 }

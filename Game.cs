@@ -19,7 +19,7 @@ public class Interface
         switch(option)
         {
             case 1:
-                Game.Current.Buy();
+                Game.Current.Buy(/* IMPLEMENTAR OS PARAMETROS AQUI */);
                 break;
         }
     }
